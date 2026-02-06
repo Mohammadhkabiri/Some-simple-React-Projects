@@ -8,7 +8,3 @@ It is intended to help beginners learn the basics of React, including:
 - Handling **events** (`onClick`, `onChange`, etc.)  
 - Passing **props** between components  
 
----
-
-## 🏗️ Project Structure
-
