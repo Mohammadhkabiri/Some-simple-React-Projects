@@ -15,5 +15,5 @@ It is designed to help learners **practice, understand, and master React and its
 ---
 ## 🏗️ Project Structure
 
-1-simple React Project to Show some Data Dynamicly
-2-Tic-Tac-Toe project with React 
+- **1-simple React Project** to Show some Data Dynamicly
+- **2-Tic-Tac-Toe** project with React 
