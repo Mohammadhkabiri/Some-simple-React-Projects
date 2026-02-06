@@ -1,7 +1,7 @@
-💰 Investment Calculator (React)
+💰 **Investment Calculator (React)**
 A sleek and interactive web application built with React.js that helps users project their wealth growth over time using compound interest calculations.
 
-✨ Features
+✨ **Features**
 Real-time Calculation: Results update instantly as you modify input values.
 
 Smart State Management: Implements "Lifting State Up" to ensure seamless data flow between the input forms and the results table.
@@ -10,16 +10,16 @@ Currency Formatting: Automatically formats all numerical outputs into USD curren
 
 Professional UI: Features a custom-styled dark mode theme with a responsive layout designed using CSS Flexbox.
 
-🚀 Tech Stack
+🚀 **Tech Stack**
 Frontend Framework: React.js (Functional Components, Hooks)
 
-Build Tool: Vite
+**Build Tool**: Vite
 
-Styling: CSS3 (Custom properties, Flexbox)
+**Styling: CSS3** (Custom properties, Flexbox)
 
-Language: JavaScript (ES6+)
+**Language**: JavaScript (ES6+)
 
-🛠️ Installation & Setup
+🛠️ **Installation & Setup**
 To run this project locally, follow these steps:
 
 Clone the repository:
@@ -30,22 +30,22 @@ Install dependencies:
 
 Start the development server:
 
-📈 How It Works
-The application processes four key metrics provided by the user:
+📈 **How It Works**
+The calculator processes four essential parameters:
 
-Initial Investment: The starting capital.
+**Initial Investment**: The starting balance.
 
-Annual Investment: The amount contributed every year.
+**Annual Investment**: The amount added to the capital each year.
 
-Expected Return: The annual rate of return (percentage).
+**Expected Return**: The annual interest rate (percentage).
 
-Duration: The total investment timeframe (years).
+**Duration**: The total investment timeframe in years.
 
-Using a compound interest algorithm, the app generates a year-by-year breakdown of interest earned, total interest, and the final investment value.
+The logic calculates the yearly interest, total interest accumulated, and the final investment value per year, presenting them in a structured table.
 
-📁 Project Structure
-src/components/: Contains UI components (Header, UserInput, Results).
+📁 **Folder Structure**
+src/components/: Houses all React Components (Header, UserInput, Results).
 
-src/util/: Houses the core mathematical logic for investment calculations.
+src/util/: Contains the Core Calculation Logic (investment.js).
 
-src/App.jsx: The central hub managing the application's global state.
+src/assets/: Stores static assets like the project logo.
