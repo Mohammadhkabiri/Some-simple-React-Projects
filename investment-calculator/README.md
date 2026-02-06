@@ -1,16 +1,51 @@
-# React + Vite
+💰 Investment Calculator (React)
+A sleek and interactive web application built with React.js that helps users project their wealth growth over time using compound interest calculations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+Real-time Calculation: Results update instantly as you modify input values.
 
-Currently, two official plugins are available:
+Smart State Management: Implements "Lifting State Up" to ensure seamless data flow between the input forms and the results table.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Currency Formatting: Automatically formats all numerical outputs into USD currency using the Intl.NumberFormat API.
 
-## React Compiler
+Professional UI: Features a custom-styled dark mode theme with a responsive layout designed using CSS Flexbox.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🚀 Tech Stack
+Frontend Framework: React.js (Functional Components, Hooks)
 
-## Expanding the ESLint configuration
+Build Tool: Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Styling: CSS3 (Custom properties, Flexbox)
+
+Language: JavaScript (ES6+)
+
+🛠️ Installation & Setup
+To run this project locally, follow these steps:
+
+Clone the repository:
+
+Navigate into the project directory:
+
+Install dependencies:
+
+Start the development server:
+
+📈 How It Works
+The application processes four key metrics provided by the user:
+
+Initial Investment: The starting capital.
+
+Annual Investment: The amount contributed every year.
+
+Expected Return: The annual rate of return (percentage).
+
+Duration: The total investment timeframe (years).
+
+Using a compound interest algorithm, the app generates a year-by-year breakdown of interest earned, total interest, and the final investment value.
+
+📁 Project Structure
+src/components/: Contains UI components (Header, UserInput, Results).
+
+src/util/: Houses the core mathematical logic for investment calculations.
+
+src/App.jsx: The central hub managing the application's global state.
