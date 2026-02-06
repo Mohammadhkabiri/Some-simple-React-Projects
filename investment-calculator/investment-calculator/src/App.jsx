@@ -10,11 +10,13 @@ function App() {
     Duration: 10,
   });
 
+  const isValidInput = userInput.Duration >= 1;
+
   function handleChangeInput(inputIdentifier, changedValue) {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: changedValue,
+        [inputIdentifier]: +changedValue,
       };
     });
   }
@@ -22,7 +24,8 @@ function App() {
     <>
       <Header />
       <UserInput onChange={handleChangeInput} userInput={userInput} />
-      <Results userInput={userInput} />
+      {!isValidInput && <p>Please Enter Valid Duration</p>}
+      {isValidInput && <Results userInput={userInput} />}
     </>
   );
 }
