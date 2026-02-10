@@ -25,6 +25,7 @@ function App() {
     setProjectState((prevState) => {
       return {
         ...prevState,
+        selectedProjectId: undefined,
         projects: [...prevState.projects, newProject],
       };
     });
@@ -42,7 +43,10 @@ function App() {
 
   return (
     <main className="my-8 h-screen flex gap-8">
-      <Sidebar onHandleAddSelectProject={handleAddSelectProject} />
+      <Sidebar
+        onHandleAddSelectProject={handleAddSelectProject}
+        projects={projectState.projects}
+      />
       {contentNewProjectOrNot}
     </main>
   );
