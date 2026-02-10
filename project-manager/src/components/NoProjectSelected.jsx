@@ -1,6 +1,6 @@
 import image from "../assets/no-projects.png";
 import Button from "./button";
-export default function NoProjectSelected() {
+export default function NoProjectSelected({onHandleAddSelectProject}) {
   return (
     <div className="mt-24 text-center w-2/3 ">
       <img
@@ -15,7 +15,7 @@ export default function NoProjectSelected() {
         Select a Project or get started with new one
       </p>
       <p className="mt-8">
-        <Button button={"Create New Project"} />
+        <Button onHandleAddSelectProject ={onHandleAddSelectProject} button={"Create New Project"} />
       </p>
     </div>
   );

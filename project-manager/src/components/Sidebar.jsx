@@ -1,5 +1,5 @@
 import Button from "./button";
-export default function Sidebar() {
+export default function Sidebar({ onHandleAddSelectProject }) {
   return (
     <aside className="w-1/3 px-8 py-16 bg-stone-900 text-stone-50 md:w-72 rounded-r-xl ">
       <h2 className="mb-8 font-bold uppercase md:text-xl text-stone-200">
@@ -7,7 +7,10 @@ export default function Sidebar() {
       </h2>
       <ul></ul>
       <div>
-        <Button button={"+ Add Project"} />
+        <Button
+          onHandleAddSelectProject={onHandleAddSelectProject}
+          button={"+ Add Project"}
+        />
       </div>
     </aside>
   );
