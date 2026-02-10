@@ -17,6 +17,19 @@ function App() {
     });
   }
 
+  function saveProject(projectData) {
+    const newProject = {
+      ...projectData,
+      id: Math.random(),
+    };
+    setProjectState((prevState) => {
+      return {
+        ...prevState,
+        projects: [...prevState.projects, newProject],
+      };
+    });
+  }
+  console.log(projectState.projects);
   let contentNewProjectOrNot;
 
   if (projectState.selectedProjectId === undefined) {
@@ -24,7 +37,7 @@ function App() {
       <NoProjectSelected onHandleAddSelectProject={handleAddSelectProject} />
     );
   } else if (projectState.selectedProjectId === null) {
-    contentNewProjectOrNot = <Newproject />;
+    contentNewProjectOrNot = <Newproject onAdd={saveProject} />;
   }
 
   return (
