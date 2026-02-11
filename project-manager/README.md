@@ -1,16 +1,53 @@
-# React + Vite
+**🚀 React Project Manager**
+A modern, minimalist Project Management Application built with React and Tailwind CSS. This app allows users to create projects, set due dates, and manage tasks within a clean and intuitive interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**✨ Key Features**
+Project Management: Easily create new projects with a title, description, and due date.
 
-Currently, two official plugins are available:
+Dynamic UI: Seamlessly switch between the "No Project Selected" state, the "Add Project" form, and the "Project Details" view.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Input Validation: Integrated Custom Modal using React Portals to alert users about empty or invalid fields.
 
-## React Compiler
+Responsive Design: Built with Tailwind CSS to ensure a beautiful layout on all screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Advanced React Concepts: Implementation of Refs, Forwarding Refs, and Imperative Handle for optimized DOM interaction.
 
-## Expanding the ESLint configuration
+**🛠 Tech Stack**
+Frontend Library: React.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Styling: Tailwind CSS
+
+Build Tool: Vite
+
+State Management: React Hooks (useState, useRef, useImperativeHandle)
+
+**🚀 Installation & Setup**
+Follow these steps to run the project locally:
+
+Clone the repository:
+
+Navigate to the project directory:
+
+Install dependencies:
+
+Start the development server:
+
+**📁 Project Structure**
+Sidebar.jsx: Manages the list of projects and the "Add Project" trigger.
+
+NewProject.jsx: Handles the logic for saving new projects and validating user input via useRef.
+
+Modal.jsx: A reusable component utilizing createPortal to display overlays outside the main DOM hierarchy.
+
+Input.jsx: A flexible component using forwardRef to handle both standard inputs and text areas.
+
+SelectedProject.jsx: Displays details for a specific project and provides Delete functionality.
+
+**📝 What I Learned**
+During the development of this project, I deepened my understanding of:
+
+Lifting State Up: Managing state in the App component to synchronize the Sidebar with the Content area.
+
+Component Reusability: Creating generic Button and Input components to maintain a consistent UI/UX.
+
+The Power of Refs: Using useRef for performance-optimized form handling instead of standard two-way binding for every keystroke.
