@@ -1,8 +1,22 @@
-export default function Login() {
+import { useState } from "react";
 
-  function handleSubmit(event){
+export default function Login() {
+  const [entredValue, setEntredValue] = useState({
+    email: "",
+    password: "",
+  });
+  function handleSubmit(event) {
     event.preventDefault();
-    console.log("submitted");
+    console.log(entredValue);
+  }
+
+  function handleChangeValue(identifier, value) {
+    setEntredValue((prevEntredValue) => {
+      return {
+        ...prevEntredValue,
+        [identifier]: value,
+      };
+    });
   }
 
   return (
@@ -12,12 +26,26 @@ export default function Login() {
       <div className="control-row">
         <div className="control no-margin">
           <label htmlFor="email">Email</label>
-          <input id="email" type="email" name="email" />
+          <input
+            onChange={(event) => handleChangeValue("email", event.target.value)}
+            value={entredValue.email}
+            id="email"
+            type="email"
+            name="email"
+          />
         </div>
 
         <div className="control no-margin">
           <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" />
+          <input
+            onChange={(event) =>
+              handleChangeValue("password", event.target.value)
+            }
+            value={entredValue.password}
+            id="password"
+            type="password"
+            name="password"
+          />
         </div>
       </div>
 
